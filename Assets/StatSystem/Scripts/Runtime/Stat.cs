@@ -18,16 +18,19 @@ namespace StatSystem
         public Stat(StatDefinition definition)
         {
             m_Definition = definition;
+            CalculateValue();
         }
 
         public void AddModifier(StatModifier modifier)
         {
             m_Modifiers.Add(modifier);
+            CalculateValue();
         }
 
         public void RemoveModifierFromSource(Object source)
         {
             m_Modifiers = m_Modifiers.Where(m => m.source.GetInstanceID() != source.GetInstanceID()).ToList();
+            CalculateValue();
         }
 
         protected void CalculateValue()
