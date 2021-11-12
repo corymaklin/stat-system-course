@@ -36,6 +36,11 @@ namespace StatSystem
             {
                 m_Stats.Add(definition.name, new Stat(definition));
             }
+
+            foreach (StatDefinition definition in m_StatDatabase.attributes)
+            {
+                m_Stats.Add(definition.name, new Attribute(definition));
+            }
         }
     }
 }

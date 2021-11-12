@@ -35,7 +35,7 @@ namespace StatSystem
 
         protected void CalculateValue()
         {
-            int finalValue = baseValue;
+            int newValue = baseValue;
             
             m_Modifiers.Sort((x, y) => x.type.CompareTo(y.type));
 
@@ -44,22 +44,22 @@ namespace StatSystem
                 StatModifier modifier = m_Modifiers[i];
                 if (modifier.type == ModifierOperationType.Additive)
                 {
-                    finalValue += modifier.magnitude;
+                    newValue += modifier.magnitude;
                 }
                 else if (modifier.type == ModifierOperationType.Multiplicative)
                 {
-                    finalValue *= modifier.magnitude;
+                    newValue *= modifier.magnitude;
                 }
             }
             
             if (m_Definition.cap >= 0)
             {
-                finalValue = Mathf.Min(finalValue, m_Definition.cap);
+                newValue = Mathf.Min(newValue, m_Definition.cap);
             }
 
-            if (m_Value != finalValue)
+            if (m_Value != newValue)
             {
-                m_Value = finalValue;
+                m_Value = newValue;
                 valueChanged?.Invoke();
             }
         }
