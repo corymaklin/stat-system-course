@@ -8,5 +8,6 @@ namespace StatSystem
     {
         public List<StatDefinition> stats;
         public List<StatDefinition> attributes;
+        public List<StatDefinition> primaryStats;
     }
 }
