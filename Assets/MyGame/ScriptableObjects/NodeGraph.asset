@@ -30,3 +30,19 @@ MonoBehaviour:
   rootNode: {fileID: -4153811856303530327}
   nodes:
   - {fileID: -4153811856303530327}
+  - {fileID: 6955473256799223289}
+--- !u!114 &6955473256799223289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
+  m_Name: Scalar
+  m_EditorClassIdentifier: 
+  position: {x: 271, y: 212}
+  guid: 79ce7163d2c93f842ba3f1335b61a7fc
+  m_Value: 0
