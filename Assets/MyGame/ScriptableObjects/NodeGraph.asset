@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
   m_Name: Scalar
   m_EditorClassIdentifier: 
-  position: {x: 193, y: 235}
+  position: {x: 211, y: 103}
   guid: 7768aeaf447695a4cb3ed7f1763961e5
   m_Value: 0
 --- !u!114 &11400000
@@ -31,6 +31,24 @@ MonoBehaviour:
   nodes:
   - {fileID: 5835059491676987227}
   - {fileID: -1277514583168125298}
+  - {fileID: 1536273220557436512}
+  - {fileID: 6456214278453443478}
+--- !u!114 &1536273220557436512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990d4eee0a2b42609345d22c5b18dd04, type: 3}
+  m_Name: Add
+  m_EditorClassIdentifier: 
+  position: {x: 272, y: 264}
+  guid: 2738a79a54b55d2478beacd11c629029
+  addendA: {fileID: 0}
+  addendB: {fileID: 0}
 --- !u!114 &5835059491676987227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,6 +61,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19ffb4285114742bc03537d53b2b4f2, type: 3}
   m_Name: ResultNode
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0}
+  position: {x: 520.52, y: 298.84}
   guid: c407a15e59b9a1f4f9f95914834a8671
-  child: {fileID: 0}
+  child: {fileID: -1277514583168125298}
+--- !u!114 &6456214278453443478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
+  m_Name: Scalar
+  m_EditorClassIdentifier: 
+  position: {x: 42, y: 289}
+  guid: ece4e7fbed8796a4fb0ef36c18587d0a
+  m_Value: 0
