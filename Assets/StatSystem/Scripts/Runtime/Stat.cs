@@ -9,6 +9,7 @@ namespace StatSystem
     public class Stat
     {
         protected StatDefinition m_Definition;
+        public StatDefinition definition => m_Definition;
         protected int m_Value;
         public int value => m_Value;
         public virtual int baseValue => m_Definition.baseValue;
@@ -18,6 +19,10 @@ namespace StatSystem
         public Stat(StatDefinition definition)
         {
             m_Definition = definition;
+        }
+
+        public void Initialize()
+        {
             CalculateValue();
         }
 
@@ -33,9 +38,14 @@ namespace StatSystem
             CalculateValue();
         }
 
-        protected void CalculateValue()
+        internal void CalculateValue()
         {
             int newValue = baseValue;
+
+            if (m_Definition.formula != null && m_Definition.formula.rootNode != null)
+            {
+                newValue += Mathf.RoundToInt(m_Definition.formula.rootNode.value);
+            }
             
             m_Modifiers.Sort((x, y) => x.type.CompareTo(y.type));
 

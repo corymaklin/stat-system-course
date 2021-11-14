@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using StatSystem.Nodes;
 using UnityEngine;
 
 namespace StatSystem
@@ -20,8 +21,6 @@ namespace StatSystem
             if (!m_IsInitialized)
             {
                 Initialize();
-                m_IsInitialized = true;
-                initialized?.Invoke();
             }
         }
 
@@ -45,6 +44,40 @@ namespace StatSystem
             foreach (StatDefinition definition in m_StatDatabase.primaryStats)
             {
                 m_Stats.Add(definition.name, new PrimaryStat(definition));
+            }
+            
+            InitializeStatFormulas();
+
+            foreach (Stat stat in m_Stats.Values)
+            {
+                stat.Initialize();
+            }
+            
+            m_IsInitialized = true;
+            initialized?.Invoke();
+        }
+
+        protected virtual void InitializeStatFormulas()
+        {
+            foreach (Stat currentStat in m_Stats.Values)
+            {
+                if (currentStat.definition.formula != null && currentStat.definition.formula.rootNode != null)
+                {
+                    List<StatNode> statNodes = currentStat.definition.formula.FindNodesOfType<StatNode>();
+
+                    foreach (StatNode statNode in statNodes)
+                    {
+                        if (m_Stats.TryGetValue(statNode.statName.Trim(), out Stat stat))
+                        {
+                            statNode.stat = stat;
+                            stat.valueChanged += currentStat.CalculateValue;
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"Stat {statNode.statName.Trim()} does not exist!");
+                        }
+                    }
+                }
             }
         }
     }
