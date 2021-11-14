@@ -14,6 +14,7 @@ namespace Core.Editor
         public new class UxmlFactory : UxmlFactory<NodeGraphView, UxmlTraits> {}
 
         private NodeGraph m_NodeGraph;
+        public Action<NodeView> nodeSelected;
 
         public NodeGraphView()
         {
@@ -64,10 +65,16 @@ namespace Core.Editor
                         nodeView.viewDataKey = node.guid;
                         nodeView.style.left = node.position.x;
                         nodeView.style.top = node.position.y;
-                        AddElement(nodeView);
+                        AddNodeView(nodeView);
                     }
                 }
             }
+        }
+
+        internal void AddNodeView(NodeView nodeView)
+        {
+            nodeView.nodeSelected = nodeSelected;
+            AddElement(nodeView);
         }
     }
 }
