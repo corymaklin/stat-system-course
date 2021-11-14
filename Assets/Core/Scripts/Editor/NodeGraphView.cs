@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Core.Editor.Nodes;
 using Core.Nodes;
@@ -69,6 +70,12 @@ namespace Core.Editor
                     }
                 }
             }
+        }
+
+        public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
+        {
+            return ports.ToList()
+                .Where(endPort => endPort.direction != startPort.direction && endPort.node != startPort.node).ToList();
         }
 
         internal void AddNodeView(NodeView nodeView)
