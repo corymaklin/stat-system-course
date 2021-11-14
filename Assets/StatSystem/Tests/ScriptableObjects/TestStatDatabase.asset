@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9153484401715855875
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
+  m_Name: AttackSpeed
+  m_EditorClassIdentifier: 
+  m_BaseValue: 1
+  m_Cap: -1
+  m_Formula: {fileID: 0}
+--- !u!114 &-6591833141603881016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
+  m_Name: Strength
+  m_EditorClassIdentifier: 
+  m_BaseValue: 1
+  m_Cap: -1
+  m_Formula: {fileID: 0}
+--- !u!114 &-4364046602682949830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
+  m_Name: Health
+  m_EditorClassIdentifier: 
+  m_BaseValue: 100
+  m_Cap: -1
+  m_Formula: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,9 +58,39 @@ MonoBehaviour:
   m_Name: TestStatDatabase
   m_EditorClassIdentifier: 
   stats:
-  - {fileID: 11400000, guid: 87e2752cf1b36244bb415278838617ce, type: 2}
-  - {fileID: 11400000, guid: 8e51290978306074197e1e66913eb58c, type: 2}
+  - {fileID: 2821024433959980759}
+  - {fileID: -9153484401715855875}
   attributes:
-  - {fileID: 11400000, guid: 2b3a4e34da437fd4982985159363dd4d, type: 2}
+  - {fileID: -4364046602682949830}
   primaryStats:
-  - {fileID: 11400000, guid: 2c26065b5af96444f88002f7591d1487, type: 2}
+  - {fileID: -6591833141603881016}
+--- !u!114 &2821024433959980759
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
+  m_Name: PhysicalAttack
+  m_EditorClassIdentifier: 
+  m_BaseValue: 0
+  m_Cap: -1
+  m_Formula: {fileID: 11400000, guid: bcb741aacd98fa1438f64dc240b921c4, type: 2}
+--- !u!114 &3188635492452569790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
+  m_Name: New Item
+  m_EditorClassIdentifier: 
+  m_BaseValue: 0
+  m_Cap: -1
+  m_Formula: {fileID: 0}

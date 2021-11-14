@@ -1,55 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1277514583168125298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
-  m_Name: Scalar
-  m_EditorClassIdentifier: 
-  position: {x: 35.24002, y: 190}
-  guid: 7768aeaf447695a4cb3ed7f1763961e5
-  m_Value: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96dedc780d9e481ea58ff91b36bc723b, type: 3}
-  m_Name: NodeGraph
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 5835059491676987227}
-  nodes:
-  - {fileID: 5835059491676987227}
-  - {fileID: -1277514583168125298}
-  - {fileID: 1536273220557436512}
-  - {fileID: 6456214278453443478}
---- !u!114 &1536273220557436512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 990d4eee0a2b42609345d22c5b18dd04, type: 3}
-  m_Name: Add
-  m_EditorClassIdentifier: 
-  position: {x: 272, y: 264}
-  guid: 2738a79a54b55d2478beacd11c629029
-  addendA: {fileID: -1277514583168125298}
-  addendB: {fileID: 6456214278453443478}
---- !u!114 &5835059491676987227
+--- !u!114 &-8363218397409473232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,10 +12,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19ffb4285114742bc03537d53b2b4f2, type: 3}
   m_Name: ResultNode
   m_EditorClassIdentifier: 
-  position: {x: 486, y: 215}
-  guid: c407a15e59b9a1f4f9f95914834a8671
-  child: {fileID: 1536273220557436512}
---- !u!114 &6456214278453443478
+  position: {x: 537, y: 165}
+  guid: 9e7b10a649cfb5b42b0cb3e56e63a91b
+  child: {fileID: 2066685055379978262}
+--- !u!114 &-7539491452468291895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8666e6d238c481fa39ecc73ed76d5cb, type: 3}
+  m_Name: Stat
+  m_EditorClassIdentifier: 
+  position: {x: 78.880005, y: 258}
+  guid: e098daae9ce4d024299cc93eb2ca1bf4
+  m_StatName: Strength
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96dedc780d9e481ea58ff91b36bc723b, type: 3}
+  m_Name: PhysicalAttackFormula
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -8363218397409473232}
+  nodes:
+  - {fileID: -8363218397409473232}
+  - {fileID: -7539491452468291895}
+  - {fileID: 6523753709221201446}
+  - {fileID: 2066685055379978262}
+--- !u!114 &2066685055379978262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948efed252f9405ebd2a79810e363b44, type: 3}
+  m_Name: Multiply
+  m_EditorClassIdentifier: 
+  position: {x: 300, y: 153}
+  guid: caac2bcde6c009a43bdf7e0bfd61afff
+  factorA: {fileID: 6523753709221201446}
+  factorB: {fileID: -7539491452468291895}
+--- !u!114 &6523753709221201446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,6 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
   m_Name: Scalar
   m_EditorClassIdentifier: 
-  position: {x: 42, y: 289}
-  guid: ece4e7fbed8796a4fb0ef36c18587d0a
-  m_Value: 0
+  position: {x: 75, y: 133}
+  guid: ecd50b2c501072c42aaab82854c44de4
+  m_Value: 3
