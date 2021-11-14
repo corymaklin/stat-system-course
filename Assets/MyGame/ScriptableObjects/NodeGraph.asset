@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4153811856303530327
+--- !u!114 &-1277514583168125298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d19ffb4285114742bc03537d53b2b4f2, type: 3}
-  m_Name: ResultNode
+  m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
+  m_Name: Scalar
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0}
-  guid: c306a427b084b444bab10ba8549aa15f
-  child: {fileID: 0}
+  position: {x: 193, y: 235}
+  guid: 7768aeaf447695a4cb3ed7f1763961e5
+  m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,11 +27,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dedc780d9e481ea58ff91b36bc723b, type: 3}
   m_Name: NodeGraph
   m_EditorClassIdentifier: 
-  rootNode: {fileID: -4153811856303530327}
+  rootNode: {fileID: 5835059491676987227}
   nodes:
-  - {fileID: -4153811856303530327}
-  - {fileID: 6955473256799223289}
---- !u!114 &6955473256799223289
+  - {fileID: 5835059491676987227}
+  - {fileID: -1277514583168125298}
+--- !u!114 &5835059491676987227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc85815fbb647f6ad4f2ac539232d6a, type: 3}
-  m_Name: Scalar
+  m_Script: {fileID: 11500000, guid: d19ffb4285114742bc03537d53b2b4f2, type: 3}
+  m_Name: ResultNode
   m_EditorClassIdentifier: 
-  position: {x: 271, y: 212}
-  guid: 79ce7163d2c93f842ba3f1335b61a7fc
-  m_Value: 0
+  position: {x: 0, y: 0}
+  guid: c407a15e59b9a1f4f9f95914834a8671
+  child: {fileID: 0}

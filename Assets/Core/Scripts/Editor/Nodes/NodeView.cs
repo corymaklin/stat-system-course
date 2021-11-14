@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Core.Nodes;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
 namespace Core.Editor.Nodes
 {
@@ -34,6 +36,14 @@ namespace Core.Editor.Nodes
         {
             base.OnSelected();
             nodeSelected?.Invoke(this);
+        }
+
+        public override void SetPosition(Rect newPos)
+        {
+            base.SetPosition(newPos);
+            node.position.x = newPos.xMin;
+            node.position.y = newPos.yMin;
+            EditorUtility.SetDirty(node);
         }
     }
 }
