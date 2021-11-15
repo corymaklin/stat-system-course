@@ -29,7 +29,7 @@ namespace StatSystem
             willUninitialize?.Invoke();
         }
 
-        private void Initialize()
+        protected void Initialize()
         {
             foreach (StatDefinition definition in m_StatDatabase.stats)
             {
