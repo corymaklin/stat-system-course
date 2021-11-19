@@ -10,8 +10,12 @@ namespace StatSystem
         
         public PrimaryStat(StatDefinition definition) : base(definition)
         {
+        }
+        
+        public override void Initialize()
+        {
             m_BaseValue = definition.baseValue;
-            CalculateValue();
+            base.Initialize();
         }
 
         internal void Add(int amount)

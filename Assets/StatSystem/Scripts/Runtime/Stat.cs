@@ -21,7 +21,7 @@ namespace StatSystem
             m_Definition = definition;
         }
 
-        public void Initialize()
+        public virtual void Initialize()
         {
             CalculateValue();
         }
