@@ -47,7 +47,7 @@ namespace StatSystem.Tests
         }
 
         [UnityTest]
-        public IEnumerator HeadsUpDisplayUI_WhenLoseHealth_UpdatesManaBar()
+        public IEnumerator HeadsUpDisplayUI_WhenLoseMana_UpdatesManaBar()
         {
             yield return null;
             PlayerStatController playerStatController = GameObject.FindObjectOfType<PlayerStatController>();
