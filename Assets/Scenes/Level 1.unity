@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Tags:
-  - Physical
+  - physical
 --- !u!65 &1202375893
 BoxCollider:
   m_ObjectHideFlags: 0

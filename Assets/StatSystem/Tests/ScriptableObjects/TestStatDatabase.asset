@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
   m_Name: PhysicalDefense
   m_EditorClassIdentifier: 
-  m_BaseValue: 0
+  m_BaseValue: 5
   m_Cap: -1
   m_Formula: {fileID: 0}
 --- !u!114 &6941035484089935456

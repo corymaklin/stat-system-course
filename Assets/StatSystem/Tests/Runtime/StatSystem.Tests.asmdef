@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "StatSystem",
-        "LevelSystem"
+        "LevelSystem",
+        "Core"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

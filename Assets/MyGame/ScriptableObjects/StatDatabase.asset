@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1c38672a6b454e8ed0e07b48a4296b, type: 3}
   m_Name: PhysicalAttack
   m_EditorClassIdentifier: 
-  m_BaseValue: 0
+  m_BaseValue: 10
   m_Cap: -1
   m_Formula: {fileID: 11400000, guid: bcb741aacd98fa1438f64dc240b921c4, type: 2}
 --- !u!114 &3188635492452569790
