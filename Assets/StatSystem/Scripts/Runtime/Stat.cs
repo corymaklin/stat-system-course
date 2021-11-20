@@ -9,6 +9,7 @@ namespace StatSystem
     public class Stat
     {
         protected StatDefinition m_Definition;
+        protected StatController m_Controller;
         public StatDefinition definition => m_Definition;
         protected int m_Value;
         public int value => m_Value;
@@ -16,9 +17,10 @@ namespace StatSystem
         public event Action valueChanged;
         protected List<StatModifier> m_Modifiers = new List<StatModifier>();
 
-        public Stat(StatDefinition definition)
+        public Stat(StatDefinition definition, StatController controller)
         {
             m_Definition = definition;
+            m_Controller = controller;
         }
 
         public virtual void Initialize()

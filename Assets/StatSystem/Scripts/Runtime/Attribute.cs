@@ -11,7 +11,7 @@ namespace StatSystem
         public event Action currentValueChanged;
         public event Action<StatModifier> appliedModifier;
         
-        public Attribute(StatDefinition definition) : base(definition)
+        public Attribute(StatDefinition definition, StatController controller) : base(definition, controller)
         {
         }
         
