@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &150961987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150961989}
+  - component: {fileID: 150961988}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &150961988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150961987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4172f83fb29413da01622b36ebfca08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SaveData: {fileID: 11400000, guid: a2421826b5fdee945a3e714c3f5eb493, type: 2}
+--- !u!4 &150961989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150961987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522648795
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +183,7 @@ GameObject:
   - component: {fileID: 522648803}
   - component: {fileID: 522648801}
   - component: {fileID: 522648802}
+  - component: {fileID: 522648804}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -264,6 +310,22 @@ MonoBehaviour:
   m_Level: 1
   m_CurrentExperience: 0
   m_RequiredExperienceFormula: {fileID: 11400000, guid: 41a6a3d4b15316d40891dfd93b6d6416, type: 2}
+--- !u!114 &522648804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522648795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a667e6d03a543438abbd0f7fab5145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SaveData: {fileID: 11400000, guid: a2421826b5fdee945a3e714c3f5eb493, type: 2}
+  m_SaveDataChannel: {fileID: 11400000, guid: 262def29d4b24ca4bbbbccf5f85ccd9f, type: 2}
+  m_LoadDataChannel: {fileID: 11400000, guid: b186c19f7a4a9b0428d240ad623826a3, type: 2}
+  m_Id: db7b110e-ba86-4a98-9a62-e4743115c135
 --- !u!1 &522698412
 GameObject:
   m_ObjectHideFlags: 0
