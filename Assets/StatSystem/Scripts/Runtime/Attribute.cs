@@ -43,8 +43,8 @@ namespace StatSystem
             {
                 m_CurrentValue = newValue;
                 currentValueChanged?.Invoke();
-                appliedModifier?.Invoke(modifier);
             }
+            appliedModifier?.Invoke(modifier);
         }
 
         #region Save System
